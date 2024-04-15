@@ -1,0 +1,14 @@
+syntax = "proto3";
+option go_package = "github.com/tigranftp/grpc_random_py_script/script_server";
+
+message ScriptRequest {
+  string req = 1;
+}
+
+message ScriptResponse {
+  string rsp = 1;
+}
+
+service ScriptServer {
+  rpc RunScript(ScriptRequest) returns (ScriptResponse);
+}
