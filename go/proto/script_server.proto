@@ -1,4 +1,7 @@
 syntax = "proto3";
+
+package script_server;
+
 option go_package = "github.com/tigranftp/grpc_random_py_script/script_server";
 
 message ScriptRequest {

@@ -10,4 +10,14 @@ generate_grpc_code_python:
 	protoc \
 	--proto_path= \
 	--python_out=py_script_server \
+	--grpc_python_out=py_script_server \
+	script_server.proto
+
+generate_grpc_code_python2:
+	py \
+	-m grpc_tools.protoc \
+	--proto_path=. \
+	--python_out=py_script_server \
+	--pyi_out=py_script_server \
+	--grpc_python_out=py_script_server \
 	script_server.proto
